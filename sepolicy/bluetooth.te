@@ -1,0 +1,8 @@
+type btnvtool, bluetoothdomain;
+type btnvtool_exec, exec_type, file_type;
+domain_auto_trans(init, btnvtool_exec, bluetooth)
+
+allow bluetooth persist_bluetooth_file:dir rw_dir_perms;
+allow bluetooth persist_bluetooth_file:file create_file_perms;
+allow bluetooth self:socket { create ioctl write getopt read };
+allow bluetooth bluetooth_efs_file:file read;

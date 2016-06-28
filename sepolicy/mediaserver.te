@@ -1,0 +1,5 @@
+allow mediaserver sysfs_camera:dir search;
+allow mediaserver sysfs_camera:file { getattr open read };
+allow mediaserver camera_prop:property_service set;
+allow mediaserver system_file:file execmod;
+allow mediaserver default_prop:property_service set;
